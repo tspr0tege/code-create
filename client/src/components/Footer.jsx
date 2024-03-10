@@ -1,16 +1,17 @@
 import * as React from 'react';
+import Alert from '@mui/material/Alert';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
+// import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
 import GithubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/X';
+// import TwitterIcon from '@mui/icons-material/X';
 
 const logoStyle = {
   width: '50px',
@@ -65,6 +66,7 @@ export default function Footer() {
                 alt="Code Create logo"
               />
             </Box>
+            <Alert severity="warning">This website is currently under construction.</Alert>
             {/* <Typography variant="body2" fontWeight={600} gutterBottom>
               Newsletter
             </Typography>

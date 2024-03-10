@@ -2,10 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
@@ -19,17 +16,28 @@ export default function Contact() {
       email: formEmail.value, 
       message: formMessage.value
     };
-    console.log(formData)
+    fetch("https://formsubmit.co/ajax/bacfd32b9a0dffec1a8cdc9de928f17e", {
+      method: "POST",
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+    // console.log(formData)
   }
 
   return (
     <Container id="contact">
       <form onSubmit={handleSubmit}>
-        <Typography variant="body2" fontWeight={600} gutterBottom>
+        <Typography component="h2" color="text.primary" variant="h4" gutterBottom>
           Contact Us
         </Typography>
         <Typography variant="body2" color="text.secondary" mb={2}>
-          Ask any questions or get scheduled for a session
+          Ask any questions or get on the waitlist for a session
         </Typography>
         <Box
           sx={{

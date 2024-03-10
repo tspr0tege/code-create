@@ -97,6 +97,9 @@ function AppAppBar({ mode, toggleColorMode }) {
                 sx={(theme) => ({
                   fontWeight: 'bold',
                   paddingLeft: '0.3em',
+                  width: '4em',
+                  lineHeight: '1em',
+                  fontWeight: '900',
                   color:
                     theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                 })}>

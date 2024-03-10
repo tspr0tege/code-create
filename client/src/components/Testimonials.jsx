@@ -103,11 +103,6 @@ export default function Testimonials() {
         <Typography component="h2" variant="h4" color="text.primary">
           Testimonials
         </Typography>
-        {/* <Typography variant="body1" color="text.secondary">
-          See what our customers love about our products. Discover how we excel in
-          efficiency, durability, and satisfaction. Join us for quality, innovation,
-          and reliable support.
-        </Typography> */}
       </Box>
       <Grid container spacing={2}>
         {userTestimonials.map((testimonial, index) => (
